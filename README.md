@@ -1,2 +1,2 @@
 # ViSioN
-A Lightweight Display for Equity Prices(OHLC)
+A Lightweight Display for Equity Prices(OHLC Volume Parameters)
