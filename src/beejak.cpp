@@ -4,7 +4,7 @@ Beejak::Beejak(QString query, QObject *parent):
     QObject(parent),
     instrumentName(query) {
 
-    QString filePath = "../ViSioN/.data/"+instrumentName+".csv";
+    QString filePath = "../ViSioN/csv_data/"+instrumentName+".csv";
     QFile fileObject(filePath);
     if(!fileObject.open(QIODevice::ReadOnly)) {        
         QMessageBox::information(Q_NULLPTR, "Error!", fileObject.errorString().toUpper()+
