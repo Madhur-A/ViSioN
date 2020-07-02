@@ -4,14 +4,12 @@ Beejak::Beejak(QString query, QObject *parent):
     QObject(parent),
     instrumentName(query) {
 
-    //QString filePath = "../ViSioN/.data/"+instrumentName+".csv";
-    QString filePath = "/home/ank/XOXO/CSVD/"+instrumentName+".csv";
+    QString filePath = "../ViSioN/.data/"+instrumentName+".csv";
     QFile fileObject(filePath);
     if(!fileObject.open(QIODevice::ReadOnly)) {        
         QMessageBox::information(Q_NULLPTR, "Error!", fileObject.errorString().toUpper()+
                                  "! Try downloading the instrument first!");
         this->fileFound = false;
-        //exit(2);
     } else {
         QTextStream inStream(&fileObject);
         QString allString   = inStream.readAll();

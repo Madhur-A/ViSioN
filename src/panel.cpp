@@ -6,7 +6,7 @@
 #include <algorithm>
 
 inline std::vector<std::string> fetch_list() noexcept(false) {
-    const std::string file_path = "/home/ank/Factory/Kurtakan/ViSioN/nyse.csv";
+    const std::string file_path = "../ViSioN/e_list/nyse.csv";
     std::vector<std::string> file_list;
     std::ifstream iof(file_path);
     if(!iof) {
@@ -38,7 +38,7 @@ inline void layoutCleaner(QLayout *layout) noexcept(false) {
 }
 
 inline QString displayAboutText() noexcept(false) {
-    QString aboutPointless = "ViSioN\nA Lightweight Display for Equities.\n\nCopyright © 2020 Varush Varsha\nvarush.varsha777@gmail.com\n\n\n"
+    QString aboutPointless = "ViSioN\nA Lightweight Display for Equity Parameters.\n\nCopyright © 2020 Varush Varsha\nvarush.varsha777@gmail.com\n\n\n"
                              "The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY"
                              " AND FITNESS FOR A PARTICULAR PURPOSE.";
     return aboutPointless;
